@@ -95,7 +95,7 @@ const ProductDashboard = () => {
                 <header className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold">Dashboard</h1>
                     <Link
-                        to="/cart"
+                        to="/myCart"
                         className="flex items-center text-black  bg-white rounded-full p-4"
                     >
                         <div className="relative">
@@ -109,44 +109,16 @@ const ProductDashboard = () => {
                         My Cart
                     </Link>
                 </header>
-                <div className="grid grid-cols-2 gap-8 mb-8">
-                    <div className="bg-black text-white p-8 rounded-lg flex items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold mb-2">ESSENTIAL ITEMS FOR</h2>
-                            <p className="mb-4">
-                                Nulla accumsan malesuada egestas nam dignissim. Quis vulputate
-                                blandit duis
-                            </p>
-                            <p className="text-4xl font-bold mb-4">$99</p>
-                            <button
-                                onClick={() =>
-                                    handleAddToCart({ id: 0, name: "Essential Item", price: 99 })
-                                }
-                                className="bg-white text-black px-4 py-2 rounded"
-                            >
-                                ADD TO CART
-                            </button>
-                        </div>
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
+                    <div className="lg:col-span-3 bg-black text-white rounded-lg overflow-hidden relative">
                         <img
                             src="/img/Group 32 (1).png"
-                            alt="Essential Item"
-                            className="ml-8"
+                            alt="Featured Product"
+                            className="w-full h-full object-cover object-center"
                         />
                     </div>
-                    <div className="bg-purple-600 text-white p-8 rounded-lg flex items-center justify-between">
-                        <div>
-                            <h2 className="text-5xl font-bold mb-4">50% OFF</h2>
-                            <h3 className="text-3xl font-bold mb-8">RUNNING KIT</h3>
-                            <button
-                                onClick={() =>
-                                    handleAddToCart({ id: -1, name: "Running Kit", price: 49.5 })
-                                }
-                                className="bg-white text-purple-600 px-4 py-2 rounded"
-                            >
-                                ADD TO CART
-                            </button>
-                        </div>
-                        <img src="img/Frame 5.png" alt="Running Kit" />
+                    <div className="bg-gray-200 p-6 rounded-lg flex flex-col justify-between">
+                        <img src="/img/Frame 5.png" alt="Running" className="w-full mt-4 object-contain" />
                     </div>
                 </div>
                 <div className="grid grid-cols-5 gap-8">

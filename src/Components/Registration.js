@@ -71,7 +71,7 @@ const Registration = () => {
                         <div className="relative">
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                             <input
-                                value={showPassword}
+                                value={password}
                                 type={showPassword ? "text" : "password"}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"
@@ -92,7 +92,7 @@ const Registration = () => {
                         <div className="relative ">
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                             <input
-                                value={showRePassword}
+                                value={rePassword}
                                 type={showRePassword ? "text" : "password"}
                                 onChange={(e) => setRePassword(e.target.value)}
                                 placeholder="Re-enter password"

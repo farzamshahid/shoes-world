@@ -61,7 +61,7 @@ const MyCart = () => {
                 <div>
                     <div className="flex items-center mb-8">
                         <img
-                            src="mark."
+                            src="mark.png"
                             alt="User"
                             className="w-12 h-12 rounded-full mr-4"
                         />
@@ -162,7 +162,11 @@ const MyCart = () => {
                         ))}
                     </div>
                     <div className="w-1/3 bg-purple-600 text-white p-8 rounded-lg">
-                        <h2 className="text-2xl font-bold mb-8">Card Details</h2>
+                        <div className="flex justify-between">
+
+                            <h2 className="text-2xl font-bold mb-8">Card Details</h2>
+                            <img src="/mark.png" alt="user" className="w-fit" />
+                        </div>
                         <div className="mb-4">
                             <p className="mb-2">Card type</p>
                             <div className="flex gap-2">
