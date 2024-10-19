@@ -1,22 +1,46 @@
-import MyCart from './Components/myCart';
-import './App.css';
-import React from 'react';
-import { Routes, Route, } from 'react-router-dom';
-import SignUp from './Components/signUp';
-import Login from './Components/login';
-import ProductDashboard from './Components/productDashboard';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { useSelector } from "react-redux";
+import Login from "./Components/Login";
+import Registration from "./Components/Registration";
+import ProductDashboard from "./Components/ProductDashboard";
+import MyCart from "./Components/MyCart";
+
+const PrivateRoute = ({ children }) => {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  return isAuthenticated ? children : <Navigate to="/" />;
+};
+
 function App() {
   return (
-    <div>
+    <Router>
+
       <Routes>
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/productDashboard" element={<ProductDashboard />} />
-        <Route path="/myCart" element={<MyCart />} />
-
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <ProductDashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/MyCart"
+          element={
+            <PrivateRoute>
+              <MyCart />
+            </PrivateRoute>
+          }
+        />
       </Routes>
-
-    </div>
+    </Router>
   );
 }
 
