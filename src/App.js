@@ -1,5 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Routes, Route, } from 'react-router-dom';
+import SignUp from './Components/signUp';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   return (
