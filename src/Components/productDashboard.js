@@ -85,7 +85,7 @@ const ProductDashboard = () => {
                 </div>
                 <button
                     onClick={handleLogout}
-                    className="flex items-center p-2 text-gray-700 rounded"
+                    className="flex items-center p-2 mt-[330px] text-gray-700 rounded"
                 >
                     <LogOut size={20} className="mr-2" /> Logout
                 </button>
