@@ -38,8 +38,8 @@ const Registration = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row h-screen bg-white overflow-hidden">
-            <div className="w-full md:w-1/2  pt-1 flex flex-col justify-center items-center">
+        <div className="flex flex-col md:flex-row h-screen bg-white sm:overflow-auto md:overflow-hidden">
+            <div className="w-full md:w-1/2   flex flex-col justify-center items-center">
                 <img src='/registration page.png' alt="Registration " />
             </div>
 
